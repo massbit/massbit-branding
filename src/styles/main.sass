@@ -1,0 +1,72 @@
+@import './_variables'
+@import './_mixins'
+
+*
+  box-sizing: border-box
+  outline: none
+
+html,
+body
+  height: 100%
+  overflow-x: hidden
+
+body 
+  position: relative
+  margin: 0
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: #000
+  background-color: #fafafa
+  font-size: 14
+
+.placeholder_dot
+    position: relative
+    width: calc(100% / 3)
+    height: 100%
+    +flexbox(center, center, column, nowrap)
+
+    &:not(:first-of-type):not(:last-of-type)
+        border-left: 1px solid rgba(#000, .34)
+        border-right: 1px solid rgba(#000, .34)
+
+    &::after
+        content: ''
+        +square(24px)
+        border-radius: 50%
+        background: #000
+
+.mainPageContainer
+    background: rgba(#000, 0)
+    +flexbox(center, center, column, nowrap)
+
+.first-section-container
+    +flexbox(center, center, column, nowrap)
+    height: 58vh
+    background-color: #22adc4
+
+.three-columns-row
+    position: relative
+    width: 80%
+    margin: 0 auto
+    +flexbox(center, center, row, wrap)
+    height: 160px
+
+.brand-details-section
+    padding: 64px 0
+    width: 60%
+    margin: 0 auto
+    +flexbox(center, center, row, nowrap)
+    gap: 64px
+
+    &__brand-image-container
+        +flexbox(center, center, column, nowrap)
+        +square(240px)
+        background: #000
+
+    &__details-text
+        margin: 0
+        line-height: 140%
+        font-weight: 500
+        letter-spacing: .3px
+        color: rgba(#000, .86 )
