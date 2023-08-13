@@ -20,6 +20,18 @@ body
   background-color: #fafafa
   font-size: 14
 
+.heading-text
+    text-transform: uppercase
+    font-weight: bold
+
+.main-title-text
+    font-size: 2.4em
+    letter-spacing: .6px
+
+.subtitle-text
+    letter-spacing: 1.4px
+    opacity: .86
+
 .placeholder_dot
     position: relative
     width: calc(100% / 3)
@@ -41,9 +53,37 @@ body
     +flexbox(center, center, column, nowrap)
 
 .first-section-container
+    position: relative
     +flexbox(center, center, column, nowrap)
     height: 58vh
-    background-color: #22adc4
+
+    &__background
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: url(../images/massbit_bg.png)
+        background-position: center center
+        background-size: cover
+
+    &__white-cover
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(#fff, .14)
+
+    &__content-box
+        z-index: 1
+        +flexbox(center, center, column, nowrap)
+        gap: 24px
+        color: #fafafa
+
+        &__main-image-wrapper
+            +flexbox(center, center, column, nowrap)
+            +square(194px)
 
 .three-columns-row
     position: relative
