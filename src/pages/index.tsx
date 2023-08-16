@@ -159,12 +159,36 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </div>
       <div className="three-columns-row">
-        <div className="placeholder_dot" />
-        <div className="placeholder_dot" />
-        <div className="placeholder_dot" />
+        <div className="logo-variant-container">
+          <StaticImage
+            src="../images/massbit_os.png"
+            placeholder="blurred"
+            alt="Massbit Open Source"
+          />
+        </div>
+        <div className="logo-variant-container">
+          <StaticImage
+            src="../images/massbit_ai.png"
+            placeholder="blurred"
+            alt="Massbit AI"
+          />
+        </div>
+        <div className="logo-variant-container">
+          <StaticImage
+            src="../images/massbit_edu.png"
+            placeholder="blurred"
+            alt="Massbit Education"
+          />
+        </div>
       </div>
       <div className="brand-details-section">
-        <div className="brand-details-section__brand-image-container"></div>
+        <div className="brand-details-section__brand-image-container">
+          <StaticImage
+            src="../images/massbit_logo_detail.png"
+            placeholder="blurred"
+            alt="Massbit Logo Detail"
+          />
+        </div>
         <p className="brand-details-section__details-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed
           mattis mi. Curabitur condimentum volutpat elit, ac condimentum erat
@@ -172,6 +196,15 @@ const IndexPage: React.FC<PageProps> = () => {
           odio accumsan sem, ac pulvinar urna leo nec eros. Vestibulum mattis
           turpis in leo laoreet suscipit.
         </p>
+      </div>
+      <div className="colors-row-container">
+        <div className="colors-row-container__blue-container">
+          <span>#1A1A42</span>
+        </div>
+        <div className="colors-row-container__red-container">
+          <span>#F44336</span>
+          <span className="red-container-bottom-text">#FF2C4A</span>
+        </div>
       </div>
       <h1 style={headingStyles}>
         Congratulations
