@@ -251,51 +251,77 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
         </div>
-        <div className="logo-credits-container">
-          <div className="logo-credit-image-container">
+      </div>
+      <div className="mosaic-grid-images">
+        <div className="business-card-image-container">
+          <StaticImage
+            src="../images/massbit_business_cards.png"
+            placeholder="blurred"
+            alt="Massbit business cards"
+          />
+        </div>
+        <div className="logo-wood-image-container">
+          <StaticImage
+            src="../images/massbit_logo_wood.png"
+            placeholder="blurred"
+            alt="Massbit logo engraved on wood"
+          />
+        </div>
+        <div className="massbit-pattern-wrapper">
+          <div className="massbit-pattern-image-container">
             <StaticImage
-              src="../images/massbit_powered_by.png"
+              src="../images/massbit_pattern.png"
+              imgStyle={{ backgroundRepeat: "repeat-y" }}
               placeholder="blurred"
-              alt="Powered by Massbit"
-            />
-          </div>
-          <div className="logo-credit-image-container">
-            <StaticImage
-              src="../images/massbit_made_by.png"
-              placeholder="blurred"
-              alt="Made by Massbit"
+              alt="Massbit logo pattern"
             />
           </div>
         </div>
-        <div className="footer-section">
-          <div className="background-dark-circle" />
-          <div className="glass-card">
-            <div className="card-text-wrapper">
-              <span className="card-text-wrapper__call-to-action">
-                Contact us @
-              </span>
-              <a
-                href="mailto:massbitdev@gmail.com"
-                className="card-text-wrapper__link"
-              >
-                massbitdev@gmail.com
-              </a>
-              <span className="card-text-wrapper__code">
-                x2xx - 0xxx - xxx2 - xx3x
-              </span>
-            </div>
-            <div className="card-logo-container">
-              <StaticImage
-                src="../images/massbit_gray.png"
-                placeholder="blurred"
-                alt="Massbit gray"
-              />
-            </div>
+      </div>
+      <div className="logo-credits-container">
+        <div className="logo-credit-image-container">
+          <StaticImage
+            src="../images/massbit_powered_by.png"
+            placeholder="blurred"
+            alt="Powered by Massbit"
+          />
+        </div>
+        <div className="logo-credit-image-container">
+          <StaticImage
+            src="../images/massbit_made_by.png"
+            placeholder="blurred"
+            alt="Made by Massbit"
+          />
+        </div>
+      </div>
+      <div className="footer-section">
+        <div className="background-dark-circle" />
+        <div className="glass-card">
+          <div className="card-text-wrapper">
+            <span className="card-text-wrapper__call-to-action">
+              Contact us @
+            </span>
+            <a
+              href="mailto:massbitdev@gmail.com"
+              className="card-text-wrapper__link"
+            >
+              massbitdev@gmail.com
+            </a>
+            <span className="card-text-wrapper__code">
+              x2xx - 0xxx - xxx2 - xx3x
+            </span>
           </div>
-          <div className="footer-credits">
-            <h1>🎉🎉🎉</h1>
-            <span className="footer-credits__version">v1.0.0</span>
+          <div className="card-logo-container">
+            <StaticImage
+              src="../images/massbit_gray.png"
+              placeholder="blurred"
+              alt="Massbit gray"
+            />
           </div>
+        </div>
+        <div className="footer-credits">
+          <h1>🎉🎉🎉</h1>
+          <span className="footer-credits__version">v1.0.0</span>
         </div>
       </div>
     </main>

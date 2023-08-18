@@ -184,6 +184,16 @@ body
         flex: 1
         +flexbox(flex-start, center, column, nowrap)
 
+        &:not(:first-of-type)        
+            border-left: 1px solid rgba(#000, .04)
+            +breakpoint('<tablet')
+                border: none
+
+        &:not(:last-of-type)
+            border-right: 1px solid rgba(#000, .04)
+            +breakpoint('<tablet')
+                border: none
+
         &__usage-wrapper
             +flexbox(flex-start, center, row, nowrap)
             gap: 24px
@@ -206,6 +216,50 @@ body
             .logo-usage-image-container
                 +flexbox(center, center, column, nowrap)
                 +square(220px)
+
+.mosaic-grid-images
+    position: relative
+    height: auto
+    min-height: 1000px
+    max-height: 80vh
+    +flexbox(flex-end, flex-start, row, wrap)
+    background: #1A1A42
+    +breakpoint('<desktop')
+        background: transparent
+        min-height: 0
+        max-height: none
+
+    .business-card-image-container
+        +flexbox(center, center, column, nowrap)
+        width: 60%
+        z-index: 1
+        border-bottom-right-radius: 16px
+        overflow: hidden
+        +breakpoint('<desktop')
+            width: 100%
+            border-bottom-right-radius: 0
+
+    .logo-wood-image-container
+        +flexbox(center, center, column, nowrap)
+        width: 40%
+        z-index: 1
+        +breakpoint('<desktop')
+            max-height: 420px
+            width: 100%
+
+    .massbit-pattern-wrapper
+        z-index: 0
+        +flexbox(center, flex-end, column, nowrap)
+        position: absolute
+        width: 100%
+        height: 100%
+        background: #1A1A42
+
+        .massbit-pattern-image-container
+            +flexbox(flex-end, center, column, nowrap)
+            position: relative
+            width: 200px
+            height: 100%
 
 .logo-credits-container
     position: relative
@@ -251,7 +305,8 @@ body
         color: #000
         border-radius: 16px
         +rectangle(500px, 280px)
-        background: rgba(255, 255, 255, 0.26)
+        min-height: 250px
+        background: rgba(0, 0, 0, 0.36)
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
         backdrop-filter: blur(5.4px)
         -webkit-backdrop-filter: blur(5.4px)
