@@ -116,6 +116,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <AnimationOnScroll
             animateIn="animate__fadeIn"
             animateOnce
+            scrollableParentSelector="body"
             offset={50}
           >
             <span>#1A1A42</span>
