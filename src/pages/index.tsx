@@ -454,7 +454,9 @@ const IndexPage: React.FC<PageProps> = () => {
           >
             <h1>🎉🎉🎉</h1>
           </AnimationOnScroll>
-          <span className="footer-credits__version">v1.0.0</span>
+          <span className="footer-credits__version">
+            Massbit 2017 - {new Date().getFullYear()} v1.0.0
+          </span>
         </div>
       </div>
     </main>
