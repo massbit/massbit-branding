@@ -6,11 +6,16 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  USER_EMAIL: ${{ secrets.USER_EMAIL }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: GitHub Config
+        run: |
+          git config --global user.email "${USER_EMAIL}"
+          git config --global user.name "ChrisUser"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
