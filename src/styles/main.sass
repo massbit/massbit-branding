@@ -1,5 +1,6 @@
 @import './_variables'
 @import './_mixins'
+@import './_animations'
 
 *
   box-sizing: border-box
@@ -13,12 +14,12 @@ body
 body 
   position: relative
   margin: 0
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   color: #000
   background-color: #fafafa
-  font-size: 14
+  font-size: 16px
 
 .heading-text
     text-transform: uppercase
@@ -58,6 +59,8 @@ body
     position: relative
     +flexbox(center, center, column, nowrap)
     height: 58vh
+    +breakpoint('<phone')
+        height: 100vh
 
     &__background
         position: absolute
@@ -92,9 +95,6 @@ body
     width: 80%
     margin: 64px auto 0
     +flexbox(center, center, row, wrap)
-    height: 160px
-    +breakpoint('<tablet')
-        height: auto
 
 .logo-variant-container
     +flexbox(center, center, column, nowrap)
@@ -102,12 +102,6 @@ body
     width: 280px
     margin: 0 24px 
     padding: 0 24px 
-
-    &:not(:first-of-type):not(:last-of-type)
-        border-left: 1px solid rgba(#000, .04)
-        border-right: 1px solid rgba(#000, .04)
-        +breakpoint('<tablet')
-            border: none
 
     .gatsby-image-wrapper
         position: relative
@@ -132,6 +126,7 @@ body
             min-width: 90%
 
     &__details-text
+        opacity: .83
         margin: 0
         line-height: 140%
         font-weight: 500
@@ -150,6 +145,11 @@ body
         position: relative
         height: 100%
         padding: 24px
+
+        .bottom-text-container
+            position: relative
+            width: 100%
+            +flexbox(flex-end, center, row, nowrap)
 
         span
             font-size: 28px
@@ -178,7 +178,7 @@ body
     position: relative
     width: 80%
     margin: 0 auto
-    padding: 64px 0 32px
+    padding: 64px 0
     +flexbox(flex-start, center, row, wrap)
 
     &__column-element
@@ -225,28 +225,37 @@ body
     max-height: 80vh
     +flexbox(flex-end, flex-start, row, wrap)
     background: #1A1A42
+    border-bottom-left-radius: 64px
+    overflow: hidden
     +breakpoint('<desktop')
         background: transparent
         min-height: 0
         max-height: none
+        border-bottom-left-radius: 0
+
+    .animate__animated
+        z-index: 1
+
+        &:first-of-type
+            width: 60%
+            +breakpoint('<desktop')
+                width: 100%
+
+        &:nth-child(2)
+            width: 40%
+            +breakpoint('<desktop')
+                max-height: 420px
+                width: 100%
 
     .business-card-image-container
         +flexbox(center, center, column, nowrap)
-        width: 60%
-        z-index: 1
         border-bottom-right-radius: 16px
         overflow: hidden
         +breakpoint('<desktop')
-            width: 100%
             border-bottom-right-radius: 0
 
     .logo-wood-image-container
         +flexbox(center, center, column, nowrap)
-        width: 40%
-        z-index: 1
-        +breakpoint('<desktop')
-            max-height: 420px
-            width: 100%
 
     .massbit-pattern-wrapper
         z-index: 0
@@ -262,6 +271,102 @@ body
             width: 200px
             height: 100%
 
+.history-wrapper
+    +flexbox(flex-start, center, column, nowrap)
+    position: relative
+    width: 90%
+    max-width: 900px
+    margin: 128px auto 64px
+    gap: 128px
+
+    .history-element
+        +flexbox(center, center, row, nowrap)
+        gap: 24px
+        height: auto
+        position: relative
+        +breakpoint('<phone')
+            align-items: flex-start
+            flex-direction: column
+
+        .history-element-header
+            +flexbox(flex-start, center, row, nowrap)
+            gap: 24px
+            +breakpoint('<phone')
+                flex-direction: row-reverse
+
+        .history-link-chain
+            position: absolute
+            left: 200px
+            border-radius: 4px
+            height: 250px
+            width: 4px
+            margin-bottom: calc(25% + 68px)
+            background-color: transparent
+            opacity: 0.3
+            background-image: linear-gradient(0deg, transparent 50%, #aaa 50%)
+            background-size: 20px 20px
+            +breakpoint('<tablet')
+                margin-bottom: calc(32% + 75px)
+            +breakpoint('<phone')
+                left: 10px
+                margin-bottom: calc(100% + (64px * 3.5))
+                height: calc(100% + 32px)
+            
+        .current-chain-element
+            background-image: linear-gradient(0deg, transparent 50%, #20CEFE 50%) !important
+
+        .current-circle-element
+            border-color: rgba(#20CEFE, .84) !important
+            background: rgba(#20CEFE, .14)
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 1)
+            transform: scale(1)
+            animation: pulse 2s infinite
+
+            &:before
+                background: rgba(#20CEFE, .84) !important
+
+        .history-circle-element
+            min-height: 24px
+            min-width: 24px
+            border: 2px solid rgba(#000, .14)
+            border-radius: 50%
+            +flexbox(center, center, column, nowrap)
+
+            &:before
+                content: ''
+                position: absolute
+                background: rgba(#000, .14)
+                min-height: 8px
+                min-width: 8px
+                border-radius: 50%
+
+        &__image-wrapper
+            +flexbox(center, center, column, nowrap)
+            background-color: rgba(#000, .027)
+            border-radius: 14px
+            padding: 8px
+
+            &__image-container
+                +square(150px)
+                +flexbox(center, center, column, nowrap)
+                flex: 1
+
+        &__text-wrapper
+            +flexbox(flex-start, flex-start, column, nowrap)
+            gap: 16px
+            +breakpoint('<phone')
+                padding-left: 48px
+
+            &__title
+                font-size: 1.6em
+                font-weight: bold
+                line-height: 110%
+
+            &__description
+                opacity: .83
+                line-height: 140%
+                letter-spacing: .4px
+
 .logo-credits-container
     position: relative
     width: 80%
@@ -269,10 +374,7 @@ body
     padding: 32px 0
     +flexbox(center, center, row, wrap)
 
-    .logo-credit-image-container
-        +flexbox(center, center, column, nowrap)
-        +rectangle(260px, 180px)
-
+    .animate__animated
         &:not(:first-of-type)        
             border-left: 1px solid rgba(#000, .04)
             +breakpoint('<tablet')
@@ -282,6 +384,10 @@ body
             border-right: 1px solid rgba(#000, .04)
             +breakpoint('<tablet')
                 border: none
+
+    .logo-credit-image-container
+        +flexbox(center, center, column, nowrap)
+        +rectangle(260px, 180px)
     
 .footer-section
     +flexbox(center, center, column, nowrap)
@@ -314,6 +420,14 @@ body
         border: 1px solid rgba(255, 255, 255, 0.46)
         margin-bottom: 64px
         padding: 24px
+        +breakpoint('<phone')
+            font-size: 14px
+            max-width: 90%
+            min-width: 320px
+            width: 90%
+            margin: 0 auto 16px
+            height: 200px
+            min-height: unset
 
         &:after
             content: ''
@@ -346,6 +460,9 @@ body
                 font-size: 1.6em
                 margin-bottom: 24px
                 transition: color 150ms linear
+                +breakpoint('<phone')
+                    font-size: 1.4em
+                    margin-bottom: 12px
 
                 &:hover
                     color: #FF2C4A
@@ -355,6 +472,8 @@ body
                 text-align: center
                 letter-spacing: 2px
                 font-size: 1.4em
+                +breakpoint('<phone')
+                    font-size: 1em
 
     .footer-credits
         +flexbox(center, center, column, nowrap)

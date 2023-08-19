@@ -4,6 +4,9 @@ import type { HeadFC, PageProps } from "gatsby"
 import "../styles/main.sass"
 import { StaticImage } from "gatsby-plugin-image"
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import "@fontsource/montserrat/400.css"
+import "@fontsource/montserrat/500.css"
+import "@fontsource/montserrat/600.css"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -123,71 +126,129 @@ const IndexPage: React.FC<PageProps> = () => {
           </AnimationOnScroll>
         </div>
         <div className="colors-row-container__red-container">
-          <span>#F44336</span>
-          <span className="red-container-bottom-text">#FF2C4A</span>
+          <AnimationOnScroll
+            animateIn="animate__fadeIn"
+            animateOnce
+            scrollableParentSelector="body"
+            offset={50}
+          >
+            <span>#F44336</span>
+          </AnimationOnScroll>
+          <div className="bottom-text-container">
+            <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              animateOnce
+              scrollableParentSelector="body"
+              offset={50}
+            >
+              <span className="red-container-bottom-text">#FF2C4A</span>
+            </AnimationOnScroll>
+          </div>
         </div>
       </div>
       <div className="logo-usage-columns">
         <div className="logo-usage-columns__column-element">
-          <div className="logo-usage-columns__column-element__usage-wrapper">
-            <div className="correct-usage-icon">✔</div>
-            <div className="logo-usage-image-container">
-              <StaticImage
-                src="../images/massbit_logo_correct_usage_one.png"
-                placeholder="blurred"
-                alt="Massbit Logo Usage Correct"
-              />
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={200}
+          >
+            <div className="logo-usage-columns__column-element__usage-wrapper">
+              <div className="correct-usage-icon">✔</div>
+              <div className="logo-usage-image-container">
+                <StaticImage
+                  src="../images/massbit_logo_correct_usage_one.png"
+                  placeholder="blurred"
+                  alt="Massbit Logo Usage Correct"
+                />
+              </div>
             </div>
-          </div>
-          <div className="logo-usage-columns__column-element__usage-wrapper">
-            <div className="correct-usage-icon">✔</div>
-            <div className="logo-usage-image-container">
-              <StaticImage
-                src="../images/massbit_logo_correct_usage_two.png"
-                placeholder="blurred"
-                alt="Massbit Logo Usage Correct"
-              />
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={400}
+          >
+            <div className="logo-usage-columns__column-element__usage-wrapper">
+              <div className="correct-usage-icon">✔</div>
+              <div className="logo-usage-image-container">
+                <StaticImage
+                  src="../images/massbit_logo_correct_usage_two.png"
+                  placeholder="blurred"
+                  alt="Massbit Logo Usage Correct"
+                />
+              </div>
             </div>
-          </div>
+          </AnimationOnScroll>
         </div>
         <div className="logo-usage-columns__column-element">
-          <div className="logo-usage-columns__column-element__usage-wrapper">
-            <div className="wrong-usage-icon">✖</div>
-            <div className="logo-usage-image-container">
-              <StaticImage
-                src="../images/massbit_logo_wrong_usage_one.png"
-                placeholder="blurred"
-                alt="Massbit Logo Usage Wrong"
-              />
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={300}
+          >
+            <div className="logo-usage-columns__column-element__usage-wrapper">
+              <div className="wrong-usage-icon">✖</div>
+              <div className="logo-usage-image-container">
+                <StaticImage
+                  src="../images/massbit_logo_wrong_usage_one.png"
+                  placeholder="blurred"
+                  alt="Massbit Logo Usage Wrong"
+                />
+              </div>
             </div>
-          </div>
-          <div className="logo-usage-columns__column-element__usage-wrapper">
-            <div className="wrong-usage-icon">✖</div>
-            <div className="logo-usage-image-container">
-              <StaticImage
-                src="../images/massbit_logo_wrong_usage_two.png"
-                placeholder="blurred"
-                alt="Massbit Logo Usage Wrong"
-              />
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={500}
+          >
+            <div className="logo-usage-columns__column-element__usage-wrapper">
+              <div className="wrong-usage-icon">✖</div>
+              <div className="logo-usage-image-container">
+                <StaticImage
+                  src="../images/massbit_logo_wrong_usage_two.png"
+                  placeholder="blurred"
+                  alt="Massbit Logo Usage Wrong"
+                />
+              </div>
             </div>
-          </div>
+          </AnimationOnScroll>
         </div>
       </div>
       <div className="mosaic-grid-images">
-        <div className="business-card-image-container">
-          <StaticImage
-            src="../images/massbit_business_cards.png"
-            placeholder="blurred"
-            alt="Massbit business cards"
-          />
-        </div>
-        <div className="logo-wood-image-container">
-          <StaticImage
-            src="../images/massbit_logo_wood.png"
-            placeholder="blurred"
-            alt="Massbit logo engraved on wood"
-          />
-        </div>
+        <AnimationOnScroll
+          animateIn="animate__fadeInLeft"
+          animateOnce
+          scrollableParentSelector="body"
+          delay={200}
+        >
+          <div className="business-card-image-container">
+            <StaticImage
+              src="../images/massbit_business_cards.png"
+              placeholder="blurred"
+              alt="Massbit business cards"
+            />
+          </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll
+          animateIn="animate__fadeInRight"
+          animateOnce
+          scrollableParentSelector="body"
+          delay={200}
+        >
+          <div className="logo-wood-image-container">
+            <StaticImage
+              src="../images/massbit_logo_wood.png"
+              placeholder="blurred"
+              alt="Massbit logo engraved on wood"
+            />
+          </div>
+        </AnimationOnScroll>
         <div className="massbit-pattern-wrapper">
           <div className="massbit-pattern-image-container">
             <StaticImage
@@ -199,21 +260,159 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
+      <div className="history-wrapper">
+        <div className="history-element">
+          <div className="history-element-header">
+            <AnimationOnScroll
+              animateIn="animate__fadeInUp"
+              animateOnce
+              scrollableParentSelector="body"
+              delay={100}
+            >
+              <div className="history-element__image-wrapper">
+                <div className="history-element__image-wrapper__image-container">
+                  <StaticImage
+                    src="../images/massbit_logo_first_version.png"
+                    placeholder="blurred"
+                    alt="Massbit logo first version"
+                  />
+                </div>
+              </div>
+            </AnimationOnScroll>
+            <div className="history-circle-element" />
+          </div>
+          <AnimationOnScroll
+            animateIn="animate__fadeInRight"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={100}
+          >
+            <div className="history-element__text-wrapper">
+              <span className="history-element__text-wrapper__title">
+                2017 - First step
+              </span>
+              <span className="history-element__text-wrapper__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                sed mattis mi. Curabitur condimentum volutpat elit, ac
+                condimentum erat tincidunt et. Morbi dignissim, mauris eget
+                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
+                leo nec eros.
+              </span>
+            </div>
+          </AnimationOnScroll>
+        </div>
+        <div className="history-element">
+          <div className="history-element-header">
+            <AnimationOnScroll
+              animateIn="animate__fadeInUp"
+              animateOnce
+              scrollableParentSelector="body"
+              delay={200}
+            >
+              <div className="history-element__image-wrapper">
+                <div className="history-element__image-wrapper__image-container">
+                  <StaticImage
+                    src="../images/massbit_logo_second_version.png"
+                    placeholder="blurred"
+                    alt="Massbit logo second version"
+                  />
+                </div>
+              </div>
+            </AnimationOnScroll>
+            <div className="history-link-chain" />
+            <div className="history-circle-element" />
+          </div>
+          <AnimationOnScroll
+            animateIn="animate__fadeInRight"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={200}
+          >
+            <div className="history-element__text-wrapper">
+              <span className="history-element__text-wrapper__title">
+                2021 - Evolution
+              </span>
+              <span className="history-element__text-wrapper__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                sed mattis mi. Curabitur condimentum volutpat elit, ac
+                condimentum erat tincidunt et. Morbi dignissim, mauris eget
+                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
+                leo nec eros.
+              </span>
+            </div>
+          </AnimationOnScroll>
+        </div>
+        <div className="history-element">
+          <div className="history-element-header">
+            <AnimationOnScroll
+              animateIn="animate__fadeInUp"
+              animateOnce
+              scrollableParentSelector="body"
+              delay={300}
+            >
+              <div className="history-element__image-wrapper">
+                <div className="history-element__image-wrapper__image-container">
+                  <StaticImage
+                    src="../images/massbit_logo_current_version.png"
+                    placeholder="blurred"
+                    alt="Massbit logo current version"
+                  />
+                </div>
+              </div>
+            </AnimationOnScroll>
+            <div className="history-link-chain current-chain-element" />
+            <div className="history-circle-element current-circle-element" />
+          </div>
+          <AnimationOnScroll
+            animateIn="animate__fadeInRight"
+            animateOnce
+            scrollableParentSelector="body"
+            delay={300}
+          >
+            <div className="history-element__text-wrapper">
+              <span className="history-element__text-wrapper__title">
+                Current - Live in the moment
+              </span>
+              <span className="history-element__text-wrapper__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                sed mattis mi. Curabitur condimentum volutpat elit, ac
+                condimentum erat tincidunt et. Morbi dignissim, mauris eget
+                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
+                leo nec eros.
+              </span>
+            </div>
+          </AnimationOnScroll>
+        </div>
+      </div>
       <div className="logo-credits-container">
-        <div className="logo-credit-image-container">
-          <StaticImage
-            src="../images/massbit_powered_by.png"
-            placeholder="blurred"
-            alt="Powered by Massbit"
-          />
-        </div>
-        <div className="logo-credit-image-container">
-          <StaticImage
-            src="../images/massbit_made_by.png"
-            placeholder="blurred"
-            alt="Made by Massbit"
-          />
-        </div>
+        <AnimationOnScroll
+          animateIn="animate__fadeInUp"
+          animateOnce
+          scrollableParentSelector="body"
+          delay={200}
+        >
+          <div className="logo-credit-image-container">
+            <StaticImage
+              src="../images/massbit_powered_by.png"
+              placeholder="blurred"
+              alt="Powered by Massbit"
+            />
+          </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll
+          animateIn="animate__fadeInUp"
+          animateOnce
+          scrollableParentSelector="body"
+          delay={400}
+        >
+          <div className="logo-credit-image-container">
+            <StaticImage
+              src="../images/massbit_made_by.png"
+              placeholder="blurred"
+              alt="Made by Massbit"
+            />
+          </div>
+        </AnimationOnScroll>
       </div>
       <div className="footer-section">
         <div className="background-dark-circle" />
@@ -251,6 +450,7 @@ const IndexPage: React.FC<PageProps> = () => {
             animateIn="animate__tada"
             scrollableParentSelector="body"
             delay={200}
+            offset={20}
           >
             <h1>🎉🎉🎉</h1>
           </AnimationOnScroll>
