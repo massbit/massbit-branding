@@ -106,11 +106,19 @@ const IndexPage: React.FC<PageProps> = () => {
           scrollableParentSelector="body"
         >
           <p className="brand-details-section__details-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed
-            mattis mi. Curabitur condimentum volutpat elit, ac condimentum erat
-            tincidunt et. Morbi dignissim, mauris eget pellentesque pulvinar,
-            diam odio accumsan sem, ac pulvinar urna leo nec eros. Vestibulum
-            mattis turpis in leo laoreet suscipit.
+            <p>
+              An almost monochromatic <b>red</b> gradient tint, a figure folded
+              as an <b>origami</b> that makes out the shape of an "M" expanding
+              in all directions.
+            </p>
+            <p>
+              The middle vertix with a roundness half the size of the external
+              ones. Dry and firm inner angles.
+            </p>
+            <p>
+              With an aspect ratio of <b>5:8</b>, this bad boy can stand either
+              a white background or a darker one.
+            </p>
           </p>
         </AnimationOnScroll>
       </div>
@@ -292,11 +300,10 @@ const IndexPage: React.FC<PageProps> = () => {
                 2017 - First step
               </span>
               <span className="history-element__text-wrapper__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                sed mattis mi. Curabitur condimentum volutpat elit, ac
-                condimentum erat tincidunt et. Morbi dignissim, mauris eget
-                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
-                leo nec eros.
+                As the Apollo team did in 1969 we tried to step into uncharted
+                territory and to define something else. A distorted, double
+                pyramid shape that symbolized our need to improve at the speed
+                of light, with pastel colors and a double typeface.
               </span>
             </div>
           </AnimationOnScroll>
@@ -333,11 +340,11 @@ const IndexPage: React.FC<PageProps> = () => {
                 2021 - Evolution
               </span>
               <span className="history-element__text-wrapper__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                sed mattis mi. Curabitur condimentum volutpat elit, ac
-                condimentum erat tincidunt et. Morbi dignissim, mauris eget
-                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
-                leo nec eros.
+                Thriving in the dark, it took 2 years of improvement and study
+                to evolve into something new. So our identity did the same.
+                Emerging from a dark blue undefined blob a reddish shape of an m
+                marks this milestone of our journey. It doesn't know that it'll
+                be a long way.
               </span>
             </div>
           </AnimationOnScroll>
@@ -374,11 +381,13 @@ const IndexPage: React.FC<PageProps> = () => {
                 Current - Live in the moment
               </span>
               <span className="history-element__text-wrapper__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                sed mattis mi. Curabitur condimentum volutpat elit, ac
-                condimentum erat tincidunt et. Morbi dignissim, mauris eget
-                pellentesque pulvinar, diam odio accumsan sem, ac pulvinar urna
-                leo nec eros.
+                <i>
+                  Young people get the foolish idea that what is new for them
+                  must be new for everybody else too. No matter how
+                  unconventional they get, they're just repeating what others
+                  before them have done.
+                </i>
+                <p>Yukio Mishima</p>
               </span>
             </div>
           </AnimationOnScroll>
